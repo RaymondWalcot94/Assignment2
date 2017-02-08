@@ -1,0 +1,3 @@
+sum_up_numbers_general([],0). /* Case list is empty returns 0 */
+
+sum_up_numbers_general(N,N) :- number(N). /* tests type to see whether it is of type int */
