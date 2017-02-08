@@ -1,0 +1,3 @@
+/* calls the function sum_up funtion with inital value 0 then the varaible to be assigned the total sum*/
+
+sum-up-numbers-simple(L, S) :- sum_up(L, 0, S).
