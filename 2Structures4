@@ -1,0 +1,12 @@
+sum_up_numbers_general([],0). /* Case list is empty returns 0 */
+
+sum_up_numbers_general(N,N) :- number(N). /* tests type to see whether it is of type int */
+
+sum_up_numbers_general([A|L],S) :- sum_up_numbers_general(A,S1), sum_up_numbers_general(L,S2), S is S1 + S2. /* recursive call the front and back side of the list to check for nested cases to accumlate the sum */
+
+
+sum_up_numbers_general([A|L], S):-  sum_up_numbers_general(L, S), write('true'). /* if S1 is of type character it recursively calls the  remaining part of the list then return true if condition is stasfied. */
+
+sum_up_numbers_general([A|L], S):-  sum_up_numbers_general(L, S). /* if S1 is of type character it recursively calls the  remaining part of the list */
+
+
