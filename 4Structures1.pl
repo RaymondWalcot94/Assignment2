@@ -1,0 +1,1 @@
+common_unique_elements([], _, []). /* base case where list is empty */
