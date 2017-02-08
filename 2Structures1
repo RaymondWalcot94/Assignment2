@@ -1,0 +1,1 @@
+sum_up_numbers_general([],0). /* Case list is empty returns 0 */
