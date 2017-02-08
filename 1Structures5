@@ -1,0 +1,16 @@
+/*calls the function sum_up funtion with inital value 0 then the varaible to be assigned the total sum*/
+
+sum-up-numbers-simple(L, S) :- sum_up(L, 0, S).
+
+/* checks to see whether the value Sa is of type number of not, then based whether it is not a number it recursivly call the remaining List argument.in the function */
+sum_up([Z|Y], Sa, S):- \+(number(Sa)), sum_up(Y, S1, S).
+
+/* checks to see whether the value Z is of type number of not, then based whether it is not a number it recursivly call the remaining List argument in the function */
+sum_up([Z|Y], Sa, S):- \+(number(Z)), sum_up(Y, S1, S).
+
+/* returns when the list is empty */
+sum_up([], S, S). 
+/* sums up accumulated S1 value with value Sa, Z  then recursively call the remaing parnt of the list */
+sum_up([Z|Y], Sa, S) :- S1 is Sa + Z , sum_up(Y, S1, S).
+
+
